@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>LNL pricelist brochure front page</title>
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="row outer-row">
+			<div class="col doc-col section-sound">
+				<div class="section-header">
+					<img style="height:0.4in;" src="assets/la325.jpg">
+					<div>Sound</div>
+					<img style="height:0.4in;" src="assets/kf850.jpg">
+				</div>
+				<div class="note">Your event will need inputs and speakers.</div>
+				<div class="card">
+					<div class="card-header">Inputs</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Small</div>
+								<div>$50</div>
+							</div>
+							<div class="option-description">Music and up to 2 inputs.
+								Suitable for speaking events or background music.
+							</div>
+						</li>
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Medium</div>
+								<div>$75</div>
+							</div>
+							<div class="option-description">Music and up to 8 inputs.
+								Suitable for panel discussions or small performances.
+							</div>
+						</li>
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Large</div>
+								<div>$150</div>
+							</div>
+							<div class="option-description">Unlimited inputs. Suitable
+								for large stage shows, concerts, bands, or other large
+								events.
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="card">
+					<div class="card-header">Speakers</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>House</div>
+								<div>&ndash;</div>
+							</div>
+							<div class="option-description">We will use the speakers that
+								are permanently installed in the venue. Not available in
+								all locations.
+							</div>
+						</li>
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Small</div>
+								<div>$80</div>
+							</div>
+							<div class="option-description">Two small speakers. Suitable
+								for speaking events, casual background music, or small
+								event spaces.
+							</div>
+						</li>
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Large</div>
+								<div>$120</div>
+							</div>
+							<div class="option-description">Two larger speakers. Suitable
+								for stage shows, dances, or larger event spaces. 
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col doc-col section-sound">
+				<div class="card">
+					<div class="card-header">Options</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Wireless Mic</div>
+								<div>$10</div>
+							</div>
+							<div class="option-description">Wired microphones are included
+								but there is a fee per wireless microphone. 
+							</div>
+						</li>
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Subwoofers</div>
+								<div>$50</div>
+							</div>
+							<div class="option-description">Subwoofers add bass to your
+								event's sound. Recommended for bands, stage shows, or
+								dances. Suitable for most events involving music.
+							</div>
+						</li>
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Stage Monitors</div>
+								<div>$30</div>
+							</div>
+							<div class="option-description">Monitors for on-stage
+								performers. Recommended for stage shows and bands.
+							</div>
+						</li>
+						<li class="list-group-item option">
+							<div class="option-head">
+								<div>Area Fills</div>
+								<div>$20</div>
+							</div>
+							<div class="option-description">Additional speakers to fill a
+								large or oddly-shaped venue.
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="logo-footer">
+					<div>
+						<img style="width:1in;" src="assets/lnl_logo.png">
+					</div>
+					<div>
+						<p>
+							WPI Lens and Lights<br>
+							c/o Student Activities Office<br>
+							100 Institute Road<br>
+							Worcester, MA 01609-2280
+						</p> 
+						<div>
+							508-831-5595<br>
+							lnl@wpi.edu<br>
+							http://lnl.wpi.edu/
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col doc-col">
+				<img src="assets/lnl_logo.png">
+				<h1>Lighting and Sound Pricelist</h1>
+				<div class="card">
+					<div class="card-body">Please submit a work order more than two weeks
+						ahead of your event.
+					</div>
+				</div>
+				<div>
+					Book your event at lnl.wpi.edu/workorder
+				</div>
+			</div>
+		</div>
+		<div class="version-info">{{ versionInfo }} <span id="timestamp"></span></div>
+		<script>
+			document.getElementById('timestamp').textContent = new Date().toISOString();
+		</script>
+	</body>
+</html>

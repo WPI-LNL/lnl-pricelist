@@ -1,0 +1,14 @@
+{
+	"name": "lnl-pricelist-2019",
+	"version": "0.0.0",
+	"description": "New 2019 pricelist for WPI Lens and Lights",
+	"author": "Ryan LaPointe",
+	"dependencies": {
+		"bootstrap": "^4.1.3",
+		"sass": "latest",
+		"nunjucks": "latest",
+		"puppeteer": "latest",
+		"jake": "latest",
+		"easy-pdf-merge": "latest"
+	}
+}

@@ -1,0 +1,191 @@
+
+/******************************************************************************
+ * Set up the page (Letter, landscape orientation) and margins.
+ ******************************************************************************/
+
+@media print{
+	@page {
+		size: letter landscape;
+	}
+}
+
+body {
+	width: 11in;
+	padding: 0.2in;
+}
+
+.outer-row {
+	margin-left: -0.2in;
+	margin-right: -0.2in;
+}
+
+.doc-col {
+	padding-left: 0.2in;
+	padding-right: 0.2in;
+	margin-top: -0.2in;
+	margin-bottom: -0.2in;
+}
+
+.doc-col > div {
+	width: 3.26in;
+	margin-top: 0.2in;
+	margin-bottom:0.2in;
+}
+
+/******************************************************************************
+ * Default fonts
+ ******************************************************************************/
+
+// Some sane defaults to make headings usable
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.12em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+body {
+	font-family: Helvetica;
+	font-size: 10pt;
+}
+
+/******************************************************************************
+ * Colors
+ ******************************************************************************/
+
+$color-lighting: #aa3939;
+$color-sound: #226666;
+$color-power: #aa6c39;
+$color-fees: #2d882d;
+
+.section-lighting .card-header, .section-lighting .option-singleton .option-head {
+	background-color: $color-lighting;
+}
+
+.section-lighting .section-header {
+	color: $color-lighting;
+}
+
+.section-sound .card-header, .section-sound .option-singleton .option-head {
+	background-color: $color-sound;
+}
+
+.section-sound .section-header {
+	color: $color-sound;
+}
+
+.section-power .card-header, .section-power .option-singleton .option-head {
+	background-color: $color-power;
+}
+
+.section-power .section-header {
+	color: $color-power;
+}
+
+.section-fees .card-header, .section-fees .option-singleton .option-head {
+	background-color: $color-fees;
+}
+
+.section-fees .section-header {
+	color: $color-fees;
+}
+
+// Fix background colors overflowing the rounded corners of cards
+.card {
+	overflow: hidden;
+}
+
+/******************************************************************************
+ * Everything else
+ ******************************************************************************/
+
+.section-header {
+	font-size: 22pt;
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.card, .card-header, .list-group-item {
+	border-color: black;
+}
+
+.card-header {
+	font-size: 14pt;
+}
+
+.card-header, .option-singleton .option-head {
+	font-weight: bold;
+	color: white;
+}
+
+.card-body {
+	padding: 0.1in;
+}
+
+.option {
+	display: flex;
+	justify-content: space-around;
+	padding: 0.1in;
+}
+
+.option-head {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	flex-basis: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-right: 0.1in;
+}
+
+.option-description {
+	font-size: 10pt;
+	flex-basis: 60%;
+}
+
+.option-singleton {
+	padding: 0;
+}
+
+.option-singleton .option-head {
+	padding: 0.1in;
+}
+
+.option-singleton .option-description {
+	padding: 0.1in;
+}
+
+.note {
+	font-size: 10pt;
+	text-align: center;
+}
+
+.fineprint {
+	font-size: 10pt;
+	text-align: justify;
+}
+
+.logo-footer {
+	font-size: 10pt;
+	width: 3.26in;
+	display: flex;
+	justify-content: center;
+}
+
+.logo-footer > div {
+	padding-left: 0.1in;
+	padding-right: 0.1in;
+}
+
+.version-info {
+	font-family: monospace;
+	position: absolute;
+	transform: rotate(-90deg);
+	transform-origin: top left;
+	left: 3.56in;
+	bottom: 2in;
+}
