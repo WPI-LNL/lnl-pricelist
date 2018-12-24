@@ -26,8 +26,8 @@ body {
 	margin-bottom: -0.2in;
 }
 
-.doc-col > div {
-	width: 3.26in;
+.doc-col > * {
+	width: 100%;
 	margin-top: 0.2in;
 	margin-bottom:0.2in;
 }
@@ -55,14 +55,14 @@ body {
 
 $color-lighting: #aa3939;
 $color-sound: #226666;
-$color-power: #aa6c39;
+$color-other: #aa6c39;
 $color-fees: #2d882d;
 
 .section-lighting .card-header, .section-lighting .option-singleton .option-head {
 	background-color: $color-lighting;
 }
 
-.section-lighting .section-header {
+.section-lighting .section-header, .section-lighting.section-header {
 	color: $color-lighting;
 }
 
@@ -70,29 +70,80 @@ $color-fees: #2d882d;
 	background-color: $color-sound;
 }
 
-.section-sound .section-header {
+.section-sound .section-header, .section-sound.section-header {
 	color: $color-sound;
 }
 
-.section-power .card-header, .section-power .option-singleton .option-head {
-	background-color: $color-power;
+.section-other .card-header, .section-other .option-singleton .option-head {
+	background-color: $color-other;
 }
 
-.section-power .section-header {
-	color: $color-power;
+.section-other .section-header, .section-other.section-header {
+	color: $color-other;
 }
 
 .section-fees .card-header, .section-fees .option-singleton .option-head {
 	background-color: $color-fees;
 }
 
-.section-fees .section-header {
+.section-fees .section-header, .section-fees.section-header {
 	color: $color-fees;
 }
 
 // Fix background colors overflowing the rounded corners of cards
 .card {
 	overflow: hidden;
+}
+
+/******************************************************************************
+ * Front page
+ ******************************************************************************/
+
+.frontpage-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.frontpage-image {
+	background-image: url('assets/frontpage.jpg');
+	background-origin: content-box;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+	flex-grow: 1;
+}
+
+.frontpage-title {
+	margin-top: 2.5in;
+	margin-bottom: 1in;
+	text-align: center;
+	background-color: white;
+	padding: 0.1in;
+}
+
+.frontpage-cta {
+	background-color: #aa3939;
+	font-size: 16pt;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0.1in;
+}
+
+.logo-footer {
+	font-size: 10pt;
+	width: 3.26in;
+	display: flex;
+	justify-content: center;
+}
+
+.logo-footer > div {
+	padding-left: 0.1in;
+	padding-right: 0.1in;
 }
 
 /******************************************************************************
@@ -167,18 +218,6 @@ $color-fees: #2d882d;
 .fineprint {
 	font-size: 10pt;
 	text-align: justify;
-}
-
-.logo-footer {
-	font-size: 10pt;
-	width: 3.26in;
-	display: flex;
-	justify-content: center;
-}
-
-.logo-footer > div {
-	padding-left: 0.1in;
-	padding-right: 0.1in;
 }
 
 .version-info {

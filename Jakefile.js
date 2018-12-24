@@ -8,7 +8,8 @@ const puppeteer = require('puppeteer');
 const merge = require('easy-pdf-merge');
 
 const version = require('./package.json').version;
-const versionInfoStr = `DRAFT ${version}`
+const gitRev = require('child_process').execSync('git rev-parse --short HEAD').toString().trim();
+const versionInfoStr = `DRAFT ${version} ${gitRev}`
 
 function renderSass(input_file, output_file) {
 	const css = sass.renderSync({file: input_file}).css;
