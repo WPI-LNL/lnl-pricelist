@@ -102,35 +102,33 @@ $color-fees: #2d882d;
 .frontpage-col {
 	display: flex;
 	flex-direction: column;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
-.frontpage-image {
-	background-image: url('assets/frontpage.jpg');
-	background-origin: content-box;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
+.frontpage-col > * {
+	margin-top: 0;
 	margin-bottom: 0;
-	flex-grow: 1;
 }
 
 .frontpage-title {
-	margin-top: 2.5in;
-	margin-bottom: 1in;
 	text-align: center;
 	background-color: white;
 	padding: 0.1in;
 }
 
-.frontpage-cta {
+#frontpage-dontbelate {
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: 0.1in;
+}
+
+#frontpage-cta {
 	background-color: #aa3939;
 	font-size: 16pt;
 	font-weight: bold;
 	color: white;
 	text-align: center;
-	margin-top: 0;
-	margin-bottom: 0;
 	padding: 0.1in;
 }
 
@@ -139,6 +137,7 @@ $color-fees: #2d882d;
 	width: 3.26in;
 	display: flex;
 	justify-content: center;
+	margin-top: 0.2in;
 }
 
 .logo-footer > div {
