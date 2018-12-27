@@ -53,10 +53,10 @@ body {
  * Colors
  ******************************************************************************/
 
-$color-lighting: #aa3939;
-$color-sound: #226666;
-$color-other: #aa6c39;
-$color-fees: #2d882d;
+$color-lighting: #c43131;
+$color-sound: #4d2d9c;
+$color-other: #03695c;
+$color-fees: #03695c;
 
 .section-lighting .card-header, .section-lighting .option-singleton .option-head {
 	background-color: $color-lighting;
@@ -118,13 +118,12 @@ $color-fees: #2d882d;
 }
 
 #frontpage-dontbelate {
-	text-align: center;
 	margin-top: auto;
 	margin-bottom: 0.1in;
 }
 
 #frontpage-cta {
-	background-color: #aa3939;
+	background-color: #c43131;
 	font-size: 16pt;
 	font-weight: bold;
 	color: white;
