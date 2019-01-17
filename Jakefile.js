@@ -46,8 +46,8 @@ function deleteFileIfExists(file) {
 }
 
 jake.task('default', ['pricelist.pdf']);
-jake.file('pricelist.pdf', ['front.pdf', 'back.pdf'], function() {
-	merge(['front.pdf', 'back.pdf'], 'pricelist.pdf', function(err) {
+jake.file('pricelist.pdf', ['page1.pdf', 'page2.pdf', 'page3.pdf'], function() {
+	merge(['page1.pdf', 'page2.pdf', 'page3.pdf'], 'pricelist.pdf', function(err) {
 		if (err) {
 			throw err;
 		}
@@ -55,17 +55,23 @@ jake.file('pricelist.pdf', ['front.pdf', 'back.pdf'], function() {
 		jake.complete();
 	})
 }, {async: true})
-jake.file('front.pdf', ['front.html', 'styles.css'], function() {
-	makePdf('front.html', 'front.pdf');
+jake.file('page1.pdf', ['page1.html', 'styles.css'], function() {
+	makePdf('page1.html', 'page1.pdf');
 }, {async: true});
-jake.file('back.pdf', ['back.html', 'styles.css'], function() {
-	makePdf('back.html', 'back.pdf');
+jake.file('page2.pdf', ['page2.html', 'styles.css'], function() {
+	makePdf('page2.html', 'page2.pdf');
 }, {async: true});
-jake.file('front.html', ['src/front.html', 'package.json'], function() {
-	renderNunjucks('src/front.html', 'front.html');
+jake.file('page3.pdf', ['page3.html', 'styles.css'], function() {
+	makePdf('page3.html', 'page3.pdf');
+}, {async: true});
+jake.file('page1.html', ['src/page1.html', 'package.json'], function() {
+	renderNunjucks('src/page1.html', 'page1.html');
 });
-jake.file('back.html', ['src/back.html', 'package.json'], function() {
-	renderNunjucks('src/back.html', 'back.html');
+jake.file('page2.html', ['src/page2.html', 'package.json'], function() {
+	renderNunjucks('src/page2.html', 'page2.html');
+});
+jake.file('page3.html', ['src/page3.html', 'package.json'], function() {
+	renderNunjucks('src/page3.html', 'page3.html');
 });
 jake.file('styles.css', ['src/styles.scss'], function() {
 	renderSass('src/styles.scss', 'styles.css');
@@ -73,9 +79,11 @@ jake.file('styles.css', ['src/styles.scss'], function() {
 
 jake.task('clean', [], function() {
 	deleteFileIfExists('pricelist.pdf');
-	deleteFileIfExists('front.pdf');
-	deleteFileIfExists('back.pdf');
-	deleteFileIfExists('front.html');
-	deleteFileIfExists('back.html');
+	deleteFileIfExists('page1.pdf');
+	deleteFileIfExists('page2.pdf');
+	deleteFileIfExists('page3.pdf');
+	deleteFileIfExists('page1.html');
+	deleteFileIfExists('page2.html');
+	deleteFileIfExists('page3.html');
 	deleteFileIfExists('styles.css');
 })
