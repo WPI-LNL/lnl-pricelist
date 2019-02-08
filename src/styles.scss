@@ -15,13 +15,13 @@ body {
 }
 
 .outer-row {
-	margin-left: -0.2in;
-	margin-right: -0.2in;
+	margin-left: -0.1in;
+	margin-right: -0.1in;
 }
 
 .doc-col {
-	padding-left: 0.2in;
-	padding-right: 0.2in;
+	padding-left: 0.1in;
+	padding-right: 0.1in;
 	margin-top: -0.2in;
 	margin-bottom: -0.2in;
 }
@@ -53,10 +53,10 @@ body {
  * Colors
  ******************************************************************************/
 
-$color-lighting: #c43131;
-$color-sound: #4d2d9c;
-$color-other: #03695c;
-$color-fees: #03695c;
+ $color-lighting: rgb(114, 164, 145);
+ $color-sound: rgb(99,121,165);
+ $color-other: rgb(127,127,127);
+ $color-fees: rgb(127,127,127);
 
 .section-lighting .card-header, .section-lighting .option-singleton .option-head {
 	background-color: $color-lighting;
@@ -96,77 +96,50 @@ $color-fees: #03695c;
 }
 
 /******************************************************************************
- * Front page
- ******************************************************************************/
-
-.frontpage-col {
-	display: flex;
-	flex-direction: column;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.frontpage-col > * {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.frontpage-title {
-	text-align: center;
-	background-color: white;
-	padding: 0.1in;
-}
-
-#frontpage-dontbelate {
-	margin-top: auto;
-	margin-bottom: 0.1in;
-}
-
-#frontpage-cta {
-	background-color: #c43131;
-	font-size: 16pt;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-	padding: 0.1in;
-}
-
-.logo-footer {
-	font-size: 10pt;
-	width: 3.26in;
-	display: flex;
-	justify-content: center;
-	margin-top: 0.2in;
-}
-
-.logo-footer > div {
-	padding-left: 0.1in;
-	padding-right: 0.1in;
-}
-
-/******************************************************************************
  * Everything else
  ******************************************************************************/
 
 .section-header {
 	font-size: 22pt;
 	font-weight: bold;
+	line-height: 0.9;
 	text-align: center;
 	display: flex;
 	justify-content: space-around;
+	margin-bottom: 0.1in;
+}
+
+.page-header {
+	text-align: center;
+	line-height: 0.9;
+	margin-bottom: 0.2in;
+}
+
+.contactinfo > * {
+	margin-left: 0.1in;
+}
+
+.contactinfo > img {
+	height: 0.7in;
 }
 
 .card, .card-header, .list-group-item {
 	border-color: black;
 }
 
-.card-header {
-	font-size: 14pt;
-}
-
 .card-header, .option-singleton .option-head {
 	font-weight: bold;
 	color: white;
+}
+
+.card-title {
+	font-size: 14pt;
+	margin-bottom: 0;
+}
+
+.card-description {
+	font-weight: normal;
+	font-size: 11pt;
 }
 
 .card-body {
@@ -183,7 +156,7 @@ $color-fees: #03695c;
 	font-size: 12pt;
 	font-weight: bold;
 	text-align: center;
-	flex-basis: 40%;
+	flex-basis: 24%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -193,7 +166,18 @@ $color-fees: #03695c;
 
 .option-description {
 	font-size: 10pt;
-	flex-basis: 60%;
+	flex-basis: 36%;
+}
+
+.option-noimg .option-description {
+	flex-basis: 76%;
+}
+
+.option-img {
+	width: 40%;
+	height: 100%;
+	object-fit: contain;
+	padding-left: 0.1in;
 }
 
 .option-singleton {
@@ -208,8 +192,12 @@ $color-fees: #03695c;
 	padding: 0.1in;
 }
 
+.option-singleton .option-img {
+	padding: 0.1in 0.1in 0.1in 0;
+}
+
 .note {
-	font-size: 10pt;
+	font-size: 12pt;
 	text-align: center;
 }
 
@@ -218,11 +206,28 @@ $color-fees: #03695c;
 	text-align: justify;
 }
 
+.contactinfo {
+	position: absolute;
+	bottom: 0.2in;
+	right: 0.2in;
+	display: flex;
+	align-items: center;
+}
+
 .version-info {
+	font-size: 0.5rem;
+	position: absolute;
+	bottom: 0.2in;
+	left: 0.2in;
+	display: flex;
+	align-items: center;
+}
+
+.version-info-verbose {
 	font-family: monospace;
 	position: absolute;
 	transform: rotate(-90deg);
 	transform-origin: top left;
-	left: 3.56in;
+	left: 5.4in;
 	bottom: 2in;
 }

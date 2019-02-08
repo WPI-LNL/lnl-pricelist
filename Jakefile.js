@@ -9,7 +9,8 @@ const merge = require('easy-pdf-merge');
 
 const version = require('./package.json').version;
 const gitRev = require('child_process').execSync('git rev-parse --short HEAD').toString().trim();
-const versionInfoStr = `DRAFT ${version} ${gitRev}`
+const versionInfoStr = `Version ${version}`
+const verboseVersionInfoStr = `DRAFT ${version} ${gitRev}`
 
 function renderSass(input_file, output_file) {
 	const css = sass.renderSync({file: input_file}).css;
@@ -19,7 +20,10 @@ function renderSass(input_file, output_file) {
 }
 
 function renderNunjucks(input_file, output_file) {
-	const html = nunjucks.render(input_file, {versionInfo: versionInfoStr});
+	const html = nunjucks.render(input_file, {
+		versionInfo: versionInfoStr,
+		verboseVersionInfo: verboseVersionInfoStr
+	});
 	fs.writeFileSync(output_file, html);
 	console.log(`Rendered ${input_file} to ${output_file}`);
 	return output_file;
